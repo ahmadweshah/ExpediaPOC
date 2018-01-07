@@ -50,8 +50,6 @@
             </div>
 
             <div class="col-md-10 col-sm-9 col-xs-12">
-                {{--hotel text information--}}
-                <p><strong>Description: </strong>{{ $hotel['hotelInfo']['description'] }}</p>
 
                 {{--promotion--}}
                 @if (isset($hotel['hotelPricingInfo']['percentSavings']) && $hotel['hotelPricingInfo']['percentSavings'] > 0)
