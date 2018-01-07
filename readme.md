@@ -1,6 +1,6 @@
 ## Access the hosted application
 
-https://wshah-expedia.herokuapp.com
+https://tranquil-springs-95758.herokuapp.com
 
 ## Running this application locally
 
