@@ -7,13 +7,13 @@
 
         <title>Expedia</title>
 
-        <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.css') }}"/>
-        <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/jquery-ui.css') }}"/>
-        <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
-        <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
-        <script src="{{ URL::asset('js/jquery-ui.js') }}"></script>
-        <script src="{{ URL::asset('js/spin.js') }}"></script>
-        <script src="{{ URL::asset('js/sidebar.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/jquery-ui.js"></script>
+        <script src="/js/spin.js"></script>
+        <script src="/js/sidebar.js"></script>
     </head>
 
     <body>
