@@ -9,6 +9,11 @@
 
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.css') }}"/>
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/jquery-ui.css') }}"/>
+        <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
+        <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
+        <script src="{{ URL::asset('js/jquery-ui.js') }}"></script>
+        <script src="{{ URL::asset('js/spin.js') }}"></script>
+        <script src="{{ URL::asset('js/sidebar.js') }}"></script>
     </head>
 
     <body>
@@ -67,11 +72,5 @@
             @include('partials/footer')
 
         </div>
-
-        <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
-        <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
-        <script src="{{ URL::asset('js/jquery-ui.js') }}"></script>
-        <script src="{{ URL::asset('js/spin.js') }}"></script>
-        <script src="{{ URL::asset('js/sidebar.js') }}"></script>
     </body>
 </html>
