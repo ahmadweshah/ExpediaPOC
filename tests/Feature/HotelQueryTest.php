@@ -61,6 +61,6 @@ class HotelQueryTest extends TestCase
     public function testHotelQueryUrl(QueryInterface $query)
     {
         $url = $query->getUrl();
-        $this->assertEquals('https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=1&uid=123&productType=Hotel&', $query->getUrl());
+        $this->assertEquals('https://offersvc.expedia.com/offers/v2/getOffers', $query->getUrl());
     }
 }

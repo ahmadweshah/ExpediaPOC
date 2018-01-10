@@ -11,5 +11,5 @@ namespace App\Library\Query;
 interface QueryInterface
 {
     public function getUrl(): string;
-    public function getParameters(): string;
+    public function getParameters(): array;
 }

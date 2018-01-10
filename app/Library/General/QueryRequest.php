@@ -9,9 +9,8 @@
 namespace App\Library\General;
 
 use App\Library\Query\QueryInterface;
-use GuzzleHttp;
 use Illuminate\Support\Facades\Log;
-
+use Ixudra\Curl\Facades\Curl;
 class QueryRequest
 {
     private $url;
@@ -35,14 +34,14 @@ class QueryRequest
         return $this->url;
     }
 
-    private function setParameters(string $parameters): QueryRequest
+    private function setParameters(array $parameters): QueryRequest
     {
         $this->parameters = $parameters;
 
         return $this;
     }
 
-    private function getParameters(): string
+    private function getParameters(): array
     {
         return $this->parameters;
     }
@@ -52,11 +51,11 @@ class QueryRequest
         Log::info('hereee');
         try
         {
-            $client = new GuzzleHttp\Client();
-            $result = $client->get($this->getUrl() . $this->getParameters());
-            Log::info('url: ' . var_export($this->getUrl(), true));
-            Log::info('Parameters: ' . var_export($this->getParameters(), true));
-            return json_decode($result->getBody(), true);
+            $response = Curl::to($this->getUrl())
+                ->withData( $this->getParameters() )
+                ->enableDebug('/tmp/logFile.txt')
+                ->get();
+            return json_decode($response, true);
         }
         catch (\Exception $e)
         {

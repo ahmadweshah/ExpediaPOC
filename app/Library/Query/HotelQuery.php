@@ -15,9 +15,13 @@ class HotelQuery extends VacationQuery implements QueryInterface
         parent::__construct();
     }
 
-    public function getParameters(): string
+    public function getParameters(): array
     {
         $parameters                     = [];
+        $parameters['scenario']         = 'deal-finder';
+        $parameters['page']             = 'foo';
+        $parameters['uid']              = 'foo';
+        $parameters['productType']      = 'Hotel';
         $parameters['destinationName']  = $this->getDestination()->getName() ?? '';
         $parameters['minTripStartDate'] = $this->getTripDate()->getStartDate(true) ?? '';
         $parameters['maxTripStartDate'] = $this->getTripDate()->getEndDate(true) ?? '';

@@ -10,6 +10,7 @@ class QueryHelper
         $parameters = array_filter($parameters);
 
         //build query parameters in http request format
-        return http_build_query($parameters);
+        //return http_build_query($parameters);
+        return $parameters;
     }
 }
